@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+
+    >
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="244dp"
+
+        android:id="@+id/imageView"
+        android:src="@drawable/prabhjot_image"
+        android:nestedScrollingEnabled="true" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/prabh_editText"
+        android:text="Prabhjot Singh"
+        android:textAlignment="center"
+        android:textSize="@dimen/abc_dialog_padding_top_material" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/prabh_branch_editText"
+        android:layout_gravity="center_horizontal"
+        android:text="Computer Science"
+        android:textAlignment="center" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageButton
+        android:layout_width="95dp"
+        android:layout_height="92dp"
+        android:id="@+id/prabh_phoneButton"
+        android:src="@drawable/phone"
+        android:scaleType="fitXY"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:layout_marginLeft="10dp"
+        android:clickable="true"
+        android:cropToPadding="false"
+        android:focusable="true"
+        android:padding="7dp"
+        android:onClick="phone_clicked" />
+
+    <ImageButton
+        android:layout_width="95dp"
+        android:layout_height="92dp"
+        android:layout_weight="1"
+        android:id="@+id/prabh_whatsapp_imageButton"
+        android:src="@drawable/whatsapp"
+        android:scaleType="fitStart"
+        android:background="@android:color/transparent"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/prabh_phoneButton"
+        android:layout_toEndOf="@+id/prabh_phoneButton"
+        android:clickable="true"
+        android:onClick="msg_clicked"
+        android:baselineAlignBottom="true" />
+    </RelativeLayout>
+</LinearLayout>

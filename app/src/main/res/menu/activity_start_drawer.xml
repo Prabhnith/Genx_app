@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single" >
+
+        <item
+            android:id="@+id/prabhjot"
+            android:icon="@drawable/prabhjot_image"
+            android:onClick="prabh_clicked"
+            android:title="Prabhjot" />
+        <item
+            android:id="@+id/aman"
+            android:icon="@drawable/aman_image"
+            android:onClick="aman_clicked"
+            android:title="Aman Dhiman" />
+        <item
+            android:id="@+id/happi"
+            android:icon="@drawable/happi_image"
+
+            android:onClick="happi_clicked"
+            android:title="Harpreet" />
+        <item
+            android:id="@+id/guri"
+            android:onClick="guri_clicked"
+            android:icon="@drawable/guri_image"
+            android:title="Gurvir" />
+        <item
+            android:id="@+id/anil"
+            android:onClick="anil_clicked"
+            android:icon="@drawable/anil_image"
+            android:title="Anil " />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@android:drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@android:drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>
