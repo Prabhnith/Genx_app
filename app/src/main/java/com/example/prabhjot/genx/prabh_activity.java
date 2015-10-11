@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import static android.support.v4.app.ActivityCompat.startActivity;
@@ -20,6 +21,16 @@ public class prabh_activity extends start {
 
         prabh_pB = (ImageButton) findViewById(R.id.prabh_phoneButton);
         prabh_mB = (ImageButton) findViewById(R.id.prabh_whatsapp_imageButton);
+
+        prabh_circle_image = (ImageView) findViewById(R.id.prabh_circle_image);
+
+        prabh_circle_image.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                ImageView iv = (ImageView) findViewById(R.id.prabh_circle_image);
+                iv.animate();
+            }
+        });
 
         prabh_pB.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -7,11 +7,13 @@
     >
     <ImageView
         android:layout_width="fill_parent"
-        android:layout_height="244dp"
-
-        android:id="@+id/imageView"
-        android:src="@drawable/prabhjot_image"
-        android:nestedScrollingEnabled="true" />
+        android:layout_height="157dp"
+        android:onClick="prabh_circle_clicked"
+        android:id="@+id/prabh_circle_image"
+        android:src="@drawable/prabh_circle"
+        android:nestedScrollingEnabled="true"
+        android:clickable="true"
+        android:layout_marginTop="10dp" />
 
     <EditText
         android:layout_width="fill_parent"
