@@ -8,8 +8,6 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import static android.support.v4.app.ActivityCompat.startActivity;
-
 /**
  * Created by prabhjot on 9/10/15.
  */
@@ -19,12 +17,12 @@ public class prabh_activity extends start {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.prabh_activity);
 
-        prabh_pB = (ImageButton) findViewById(R.id.prabh_phoneButton);
-        prabh_mB = (ImageButton) findViewById(R.id.prabh_whatsapp_imageButton);
+        ImageButton prabh_pB = (ImageButton) findViewById(R.id.prabh_phoneButton);
+        ImageButton prabh_mB = (ImageButton) findViewById(R.id.prabh_whatsapp_imageButton);
 
-        prabh_circle_image = (ImageView) findViewById(R.id.prabh_circle_image);
+        ImageView prabh_circle_image = (ImageView) findViewById(R.id.prabh_circle_image);
 
-        prabh_circle_image.setOnClickListener(new View.OnClickListener(){
+        prabh_circle_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ImageView iv = (ImageView) findViewById(R.id.prabh_circle_image);
@@ -45,14 +43,13 @@ public class prabh_activity extends start {
             }
         });
 
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceholderFragment()).commit();
-        }
+      /*  if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.container, new PlaceholderFragment()).commit();
+        }*/
     }
 
     private void whatsapp_prabhjot() {
-        Toast.makeText(this,"Whatsapping..",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Whatsapping..", Toast.LENGTH_SHORT).show();
         Intent wa = new Intent(Intent.ACTION_CHOOSER);
     }
 
@@ -63,8 +60,7 @@ public class prabh_activity extends start {
         try {
             startActivity(phoneintent);
         } catch (android.content.ActivityNotFoundException ex) {
-            Toast.makeText(getApplicationContext(), "Activity not found");
+            Toast.makeText(getApplicationContext(), "Activity not found", Toast.LENGTH_SHORT).show();
         }
     }
-
 }
